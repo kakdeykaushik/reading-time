@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Reading Time",
   "short_name": "Reading Time",
   "description": "This extension shows the estimated reading time for a web page",
@@ -33,10 +33,12 @@
     }
   ],
   "web_accessible_resources": [
-    "assets/*.*"
+    {
+      "resources": ["assets/*.*"],
+      "matches": ["<all_urls>"]
+    }
   ],
   "options_ui": {
-    "page": "optionsPage/options.html",
-    "chrome_style": true
+    "page": "optionsPage/options.html"
   }
 }
